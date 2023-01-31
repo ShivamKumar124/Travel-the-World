@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Ubuntu", sans-serif;
+      }
+      body {
+        min-height: 100vh;
+        min-width: 100vw;
+        overflow-x: hidden;
+      }
+      .footer {
+        background-color: skyblue;
+        height: 4em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        z-index: 99;
+      }
+      .ob {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .item:hover {
+        background-color: whitesmoke;
+      }
+      .item {
+        margin: auto 25px;
+
+        padding: 4px 5px;
+        border-radius: 0.5rem;
+        color: black;
+      }
+      .logo {
+        margin: auto 15px;
+        padding: 14px 5px;
+        border-radius: 0.5rem;
+      }
+      .logo:hover {
+        background-color: whitesmoke;
+      }
+      .page1 {
+        height: 100vh;
+        width: 100vw;
+        background: url("./image/pexelsphoto114251.jpeg") no-repeat center
+          center/cover;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-attachment: fixed;
+      }
+      .logo1 {
+        position: absolute;
+        background: url("./image/logo.png");
+      }
+      .page1 h3 {
+        color: white;
+      }
+      .secondimage {
+        height: 100vh;
+        width: 100vw;
+        background: url("./image/pexelsphoto1367170.jpeg") no-repeat center
+          center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-attachment: fixed;
+      }
+      .cont1 {
+        height: 80%;
+        width: 30%;
+        /* border: 2px solid red;*/
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .cont1 img {
+        position: absolute;
+
+        margin-right: 0;
+      }
+      .col {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+
+        z-index: 2;
+      }
+      .expert1 {
+        color: white;
+        z-index: 2;
+        margin-top: 6.5rem;
+        text-align: right;
+        padding-right: 2rem;
+        right: 0;
+        font-size: 3rem;
+      }
+      .expert2 {
+        color: white;
+        z-index: 2;
+        margin-top: 1.5rem;
+        text-align: right;
+        padding-right: 2rem;
+        left: 0;
+
+        font-size: 3rem;
+      }
+      .cont2 {
+        display: flex;
+        justify-content: center;
+
+        flex-direction: column;
+        position: absolute;
+
+        top: 8rem;
+      }
+      .para1 {
+        color: white;
+        margin-bottom: 2rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+      }
+      .para2 {
+        color: white;
+        margin-left: 3rem;
+        margin-right: 3rem;
+      }
+      .button {
+        position: absolute;
+        color: black;
+
+        margin-top: 25rem;
+        margin-left: 3rem;
+        padding: 0.5rem;
+        background-color: white;
+        width: 6rem;
+        height: 2rem;
+      }
+      .page3 {
+        height: 100vh;
+        width: 100vw;
+        background: url(./image/background.jpeg) no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 6rem;
+        background-attachment: fixed;
+      }
+
+      .t {
+        height: 100vh;
+        width: 90vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .t1 {
+        width: 25%;
+        height: 90%;
+        position: relative;
+        color: white;
+        margin-right: 1rem;
+      }
+      .t1 img {
+        width: 100%;
+        height: 60%;
+        box-shadow: 2px 2px 2px gray;
+        margin-bottom: 1.5rem;
+      }
+      .t1 img :hover {
+        z-index: 3;
+      }
+      .t1 h3 {
+        color: white;
+        padding-left: 1rem;
+        font-weight: bold;
+        margin-bottom: 1.2rem;
+      }
+      .t1 h2 {
+        position: absolute;
+        top: 0;
+        font-size: 3rem;
+        margin-left: 2rem;
+        margin-top: 1.5rem;
+        text-align: left;
+        height: 8rem;
+        width: 10rem;
+      }
+      .t1 p {
+        color: white;
+        padding-left: 1rem;
+      }
+      .leader {
+        height: 40vh;
+        width: 100vw;
+        background-color: rgba(119, 162, 227, 0.854);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .l1 {
+        height: 90%;
+        width: 40%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .l1 h1 {
+        font-size: 3rem;
+        height: 8rem;
+        width: 20rem;
+
+        font-weight: bold;
+      }
+      .l1 p {
+        position: absolute;
+        margin-bottom: 3rem;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+      }
+      .last {
+        height: 100vh;
+        width: 100vw;
+        background: url("./image/background.jpeg") no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-attachment: fixed;
+      }
+      .end1 {
+        height: 60%;
+        width: 30%;
+       /* border: 1px solid red;*/
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .end1 h1 {
+        color: white;
+        position: absolute;
+        margin-top: 0rem;
+        font-weight: bold;
+        font-size: 3rem;
+        
+      }
+
+      .end2 {
+        height: 60%;
+        width: 30%;
+        /*border: 1px solid red;*/
+        background: url("./image/pexelsphoto114251.jpeg") no-repeat center
+          center/cover;
+      }
+      .end2 h2 {
+        color: white;
+        margin-top: 5rem;
+        text-align: right;
+        padding-right: 1rem;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+      .end2 p {
+        text-align: right;
+        color: white;
+        padding-right: 1rem;
+      }
+      .form {
+       /* border: 1px solid red;*/
+        margin-top: 6rem;
+        margin-right: 0.2rem;
+        height: 20rem;
+        width: 28rem;
+      }
+      input,
+      textarea {
+        border: 1.5px solid white;
+        border-radius: 0.2rem;
+        background: transparent;
+        color: white;
+        padding-left: 0.2rem;
+        margin-left: 1rem;
+      }
+
+      input#name {
+        width: 25rem;
+        height: 2.5rem;
+      }
+      input#email {
+        width: 25rem;
+        height: 2.5rem;
+      }
+      textarea#message {
+        width: 25rem;
+        height: 8rem;
+        padding-top: 0.5rem;
+      }
+      input#Submit{
+        width:6rem;
+        height:2rem;
+        padding: auto auto;
+        background-color: white;
+        color:black
+      }
+    </style>
+  </head>
+  <body>
+    <div class="footer">
+      <div class="logo">logo</div>
+      <div class="ob">
+        <div class="item">Home</div>
+        <div class="item">About</div>
+        <div class="item">Contact Us</div>
+      </div>
+    </div>
+    <div class="page1">
+      <img src="./image/logo.png" alt="logo" />
+      <h3>We are travel agency</h3>
+    </div>
+    <div class="secondimage">
+      <div class="cont1">
+        <img src="./image/semi.png" alt="" />
+        <div class="col">
+          <p class="expert1">Choose The</p>
+          <p class="expert2">Travel Experts</p>
+        </div>
+      </div>
+      <div class="cont1">
+        <div class="cont2">
+          <p class="para1">
+            At Mountain Home Charter Service Inc., our number one concern is
+            customer satisfaction. We believe this can only be accomplished by
+            providing superior service, quality lines, and competitive pricing.
+          </p>
+          <p class="para2">
+            We are a nationwide charter service that serves Springfield, Branson
+            and the surrounding areas with late model MCI Luxury Motorcoaches.
+            Our fine buses boast a 54 to 56 passenger capacity, are equipped
+            with restrooms and feature DVD players and monitors.
+          </p>
+          <div class="button">read more</div>
+        </div>
+      </div>
+    </div>
+    <div class="page3">
+      <div class="t">
+        <div class="t1">
+          <img src="./image/pexelsphoto1624504.jpeg" alt="" />
+          <h1></h1>
+          <h3>Missioners group</h3>
+          <p>
+            We offer a full range of travel services to church groups ,
+            humanitarian agencies, and missionary organizations.
+          </p>
+        </div>
+        <div class="t1">
+          <img src="./image/pexelsphoto934718.jpeg" alt="" />
+          <h2>What We Do</h2>
+          <h3>Leisure Travel</h3>
+          <p>
+            We offer a full range of travel services to church groups ,
+            humanitarian agencies, and missionary organizations.
+          </p>
+        </div>
+        <div class="t1">
+          <img src="./image/pexelsphoto167684.jpeg" alt="" />
+          <h3>Corporate group</h3>
+          <p>
+            We offer a full range of travel services to church groups ,
+            humanitarian agencies, and missionary organizations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="leader">
+      <div class="l1">
+        <div class="center">
+          <h1>How Travel Leader Works</h1>
+        </div>
+      </div>
+      <div class="l1">
+        <p>
+          We are the largest and most celebrated network of professional travel
+          agents in North America. Wherever you want to go, however you want to
+          get there, whatever you want to do—we have the ideal travel agent
+          match just for you.
+        </p>
+      </div>
+    </div>
+    <div class="last">
+      <div class="end1">
+        <h1>Ask Us a question</h1>
+        <div class="form">
+          <form action="">
+            <input
+              type="text"
+              name=""
+              id="name"
+              placeholder="Enter Your name"
+            /><br /><br />
+            <input
+              type="email"
+              name=""
+              id="email"
+              placeholder="Enter your email address"
+            /><br /><br />
+            <textarea id="message" name="message" placeholder="Enter your message"></textarea
+            ><br><br>
+
+            <input type="submit" name="" id="Submit" />
+          </form>
+        </div>
+      </div>
+      <div class="end2">
+        <h2>Contact us</h2>
+        <p> Katapola, Amorgos 84008, Greece </p>
+        <p>+30 22850 71554,</p>
+        <p>+30 22850 71554 </p>
+
+        <p>info@adventure.com</p>
+      </div>
+    </div>
+  </body>
+</html>
